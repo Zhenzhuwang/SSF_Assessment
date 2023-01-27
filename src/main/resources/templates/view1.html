@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            border: 1px solid black;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <p>Please enter your delivery address.</p>
+    <form method="post" action="/place/order" enctype="application/x-www-form-urlencoded">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" minlength="3" required>
+        <br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" placeholder="Enter your address" required>
+        <br>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" minlength="8" required>
+        <br>
+        <label for="checkbox">Rush:</label>
+        <input type="checkbox" id="checkbox" name="rush" value="rush">
+        <br>
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" placeholder="Enter any comments"></textarea>
+        <br>
+        <input type="button" value="Cancel Order" onclick="location.href='/pizza'">
+        <input type="submit" value="Place Order">
+      </form>
+      
+</body>
+</html>
